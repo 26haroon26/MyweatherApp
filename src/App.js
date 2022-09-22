@@ -1,10 +1,12 @@
 import './App.css';
+// import ForCastWeather from './components/forcastweather';
+import CurrentWeather from './components/currentweather';
 
 function App() {
   return (
     <div className="App">
-    <h1>Muhammad Haroon
-    </h1>
+  <CurrentWeather/>
+  {/* <ForCastWeather/> */}
     </div>
   );
 }
