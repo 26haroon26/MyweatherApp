@@ -1,31 +1,40 @@
 import React from "react";
+import "./forecastweather.css";
 
-function Abcd(Data) {
+function Abcd({ Data }) {
   return (
     <>
       <div className="forhour">
-        <p>{Data.time}</p> <p>{Data.temperature}</p>
-        {/* <img src={`http://openweathermap.org/img/wn/${Data.image}@2x.png` }alt="" /> */}
-        <p>{Data.name}</p>
+        <p>{Data?.dt_txt.slice(0,11)}</p> 
+        <p>{Data?.dt_txt.slice(11,16)}</p> 
+        <p>{Data?.main?.temp}°C</p>
+        <p><img
+          src={`https://openweathermap.org/img/w/${Data?.weather[0].icon}.png`}
+          alt=""
+        /></p>
+        <p>{Data?.weather[0]?.description}</p>
       </div>
     </>
   );
 }
-const ForCastWeather = (data) => {
+// for (let i = 0; i < 5; i++) {
+  //   for (let j = 0; j < 8; j++) {
+  //    {!data.list === {} &&
+  //     <Abcd Data={data.list} />}}
+  //     } 
+
+const ForCastWeather = ({ data }) => {
+    
   return (
     <>
       <div className="forDays">
         <div className="forul">
-          <Abcd Data={data} />
-          {/* <div>
-            Temperature :{Math.round(weatherData?.list[0]?.main?.temp)}C
-          </div>
-          <div>Temperature :{weatherData?.list[0]?.dt_txt}C</div>
-          <div>
-            Temperature :{weatherData?.list[0]?.weather[0]?.description}
-          </div>
-          <div>Temperature :{weatherData?.list[0]?.weather[0]?.icon}</div>*/}
-        </div> 
+     
+          {data.list.map(function (items, i) {
+            return <Abcd Data={items} key={i} />;
+          })}
+
+        </div>
       </div>
     </>
   );

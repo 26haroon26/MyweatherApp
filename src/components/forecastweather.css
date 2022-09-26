@@ -1,0 +1,33 @@
+.forhour {
+  display: flex;
+  justify-content: space-between;
+  color: grey;
+  margin-top: 5px;
+  border: 1px solid black;
+  box-shadow: inset 0px 0px 30px black;
+  border-radius: 10px;
+}
+.forhour:hover {
+  background-color: aqua;
+  border: 1px solid grey;
+  box-shadow: inset 0px 0px 30px blueviolet;
+  border-radius: 10px;
+  color: white;
+  font-size: large;
+}
+
+.forhour > p > img {
+  background-color: black;
+  border-radius: 50px;
+}
+.forhour > p {
+  /* border: 1px solid red; */
+  width: 15%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.forDays {
+  width: 100%;
+}

@@ -1,0 +1,43 @@
+.flexForCurrent{
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    font-size: 15px;
+    height: 35vh;
+    text-align: center;
+    padding-top: 5px;
+    border: 1px solid black;
+    box-shadow: inset 0px 0px 50px black;
+    border-radius: 10px;
+    color: rgb(129, 129, 129);
+
+}.flexForCurrent:hover{
+    background-color: aqua;
+  border: 1px solid grey;
+  box-shadow: inset 0px 0px 30px blueviolet;
+  border-radius: 10px;
+  color: white;
+  font-size: large;
+}
+.mainForCurrent{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+.rightsideCurrent ,.leftsideCurrent  {
+    text-align: center;
+    height: inherit;
+    /* border: 1px solid red; */
+    width: 40%;
+}.rightsideCurrent > div ,.leftsideCurrent > div{
+    line-height: 35px;
+}
+.cityCountry{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}.leftsideCurrent > div > img {
+    border-radius: 50px;
+}
